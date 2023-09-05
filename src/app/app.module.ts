@@ -38,7 +38,8 @@ import { PaymentComponent } from './patient/payment/payment.component';
         DashboardComponent,
         NavbarComponent,
         FooterComponent,
-        PaymentComponent
+        PaymentComponent,
+       
     ],
     providers: [],
     bootstrap: [AppComponent],

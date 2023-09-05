@@ -21,7 +21,7 @@ export class RegisterComponent {
         console.log("Registered successfully", data);
         
         // Navigate to the 'home' route after successful registration
-        this.router.navigate(['/Doctor']);
+        this.router.navigate(['/home']);
     }, error => {
         console.error("Registration failed", error);
     });

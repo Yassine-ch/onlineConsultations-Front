@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'questionnaire', component: QuestionnaireComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
-
   { path: 'home', component: DashboardComponent },];
 
 @NgModule({
