@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaymentComponent } from './patient/payment/payment.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { PaymentComponent } from './patient/payment/payment.component';
         NavbarComponent,
         FooterComponent,
         PaymentComponent,
+        SidebarComponent,
        
     ],
     providers: [],

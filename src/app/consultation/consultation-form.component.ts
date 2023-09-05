@@ -26,26 +26,27 @@ export class ConsultationFormComponent {
       previous: [false] // Set the default value to false
     }); 
   }
-
-  public onSubmit(): void {
-    this.consultationService.createConsultation(this.consultationForm.value).subscribe(
-      (response: Consultation) =>{
-        console.log(response);
-
+  ngOnInit(): void {
+    this.consultationService.getConsultations().subscribe(
+      (response: Consultation[]) => {
+        this.consultations = response;
       },
-      (error: HttpErrorResponse) =>{
-        alert(error.message);
+      (error) => {
+        console.error('Failed to fetch consultations', error);
       }
     );
-    };
-    ngOnInit(): void {
-      this.consultationService.getConsultations().subscribe(
-        (response: Consultation[]) => {
-          this.consultations = response;
-        },
-        (error) => {
-          console.error('Failed to fetch consultations', error);
-        }
-      );
-    }
+  }
+
+  // public onSubmit(): void {
+  //   this.consultationService.createConsultation(this.consultationForm.value).subscribe(
+  //     (response: Consultation) =>{
+  //       console.log(response);
+
+  //     },
+  //     (error: HttpErrorResponse) =>{
+  //       alert(error.message);
+  //     }
+  //   );
+  //   };
+
   };
