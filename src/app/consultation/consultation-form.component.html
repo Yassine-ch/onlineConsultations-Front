@@ -1,4 +1,4 @@
-<form [formGroup]="consultationForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="consultationForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
         <label>Start Time:</label>
@@ -23,5 +23,36 @@
     </div>
     
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
 
+<!-- consultation-list.component.html -->
+<div class="container mt-5">
+    <h2>List of Consultations</h2>
+    <div *ngIf="consultations.length > 0; else noData">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+           
+            <th>Status</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Concerns</th>
+            <th>Doctor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let consultation of consultations">
+            <td>{{ consultation.status }}</td>
+            <td>{{ consultation.startTime }}</td>
+            <td>{{ consultation.endTime }}</td>
+            <td>{{ consultation.concerns }}</td>
+            <td>{{consultation.doctor.firstName}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noData>
+      <p>No consultations available.</p>
+    </ng-template>
+  </div>
+  

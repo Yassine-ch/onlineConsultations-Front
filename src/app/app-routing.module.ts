@@ -15,7 +15,10 @@ const routes: Routes = [
   { path: 'questionnaire', component: QuestionnaireComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: DashboardComponent },];
+  { path: 'home', component: DashboardComponent },
+{  path: 'consultations',
+  component: ConsultationFormComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

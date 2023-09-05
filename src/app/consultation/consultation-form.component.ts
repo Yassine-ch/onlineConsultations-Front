@@ -11,6 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class ConsultationFormComponent {
   consultationForm: FormGroup;
+  consultations: Consultation[] = [];
 
   
 
@@ -37,4 +38,14 @@ export class ConsultationFormComponent {
       }
     );
     };
+    ngOnInit(): void {
+      this.consultationService.getConsultations().subscribe(
+        (response: Consultation[]) => {
+          this.consultations = response;
+        },
+        (error) => {
+          console.error('Failed to fetch consultations', error);
+        }
+      );
+    }
   };

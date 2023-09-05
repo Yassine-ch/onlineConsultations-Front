@@ -20,4 +20,15 @@ export class ConsultationService {
   public createConsultation(consultation: Consultation): Observable<Consultation> {
     const url = `${this.apiServerUrl}/api/consultations`; // Adjust the endpoint as needed
     return this.http.post<Consultation>(url, consultation);
-  }}
+  }
+//Get all consulation
+
+
+
+
+
+
+}
+
+
+
