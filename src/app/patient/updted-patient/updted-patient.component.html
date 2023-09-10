@@ -1,0 +1,16 @@
+<!-- update-patient.component.html -->
+<div *ngIf="patient">
+    <form (ngSubmit)="onSubmit()">
+      <label for="firstName">First Name</label>
+      <input id="firstName" [(ngModel)]="patient.firstName" name="firstName">
+  
+      <label for="lastName">Last Name</label>
+      <input id="lastName" [(ngModel)]="patient.lastName" name="lastName">
+  
+      <label for="email">Email</label>
+      <input id="email" [(ngModel)]="patient.email" name="email">
+  
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

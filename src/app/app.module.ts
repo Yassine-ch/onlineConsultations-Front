@@ -25,6 +25,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PaymentComponent } from './patient/payment/payment.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { SidebarAdminComponent } from './admin-dashboard/sidebar-admin/sidebar-admin.component';
+import { StatsComponent } from './admin-dashboard/stats/stats.component';
+
 
 @NgModule({
     declarations: [
@@ -41,6 +45,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
         FooterComponent,
         PaymentComponent,
         SidebarComponent,
+       SidebarAdminComponent,
+        AdminDashboardComponent,
+StatsComponent
        
     ],
     providers: [],

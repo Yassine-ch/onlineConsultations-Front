@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PatientService } from './patient.service';
 
 @Component({
   selector: 'app-patient',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent {
+  patientCount!: number;
+
+  constructor(private patientService: PatientService) { }
 
 }

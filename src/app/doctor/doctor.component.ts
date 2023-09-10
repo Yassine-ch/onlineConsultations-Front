@@ -13,7 +13,7 @@ export class DoctorComponent implements OnInit {
     public doctors!: Doctor[];
     public consultationTimes: string[] = [];
     public liveDay: string = '';
-
+    doctorCount!: number;
 
     constructor(private doctorService: DoctorService,private router: Router) { }
 
@@ -21,6 +21,7 @@ export class DoctorComponent implements OnInit {
         this.getDoctors();
         this.generateConsultationTimes();
         this.updateLiveDay(); // Update live day when component initializes
+      
 
     }
 
@@ -70,5 +71,7 @@ export class DoctorComponent implements OnInit {
     onTimeClick() {
         this.router.navigate(['/questionnaire']);
       }
-    
+     
+
+
 }

@@ -7,6 +7,8 @@ import { QuestionnaireComponent } from './patient/questionnaire/questionnaire.co
 import { PaymentComponent } from './patient/payment/payment.component';
 import { LoginComponent } from './patient/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 const routes: Routes = [
   {path:'Register',component:RegisterComponent},
@@ -16,8 +18,13 @@ const routes: Routes = [
   { path: 'payment', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: DashboardComponent },
-{  path: 'consultations',
-  component: ConsultationFormComponent}
+{  path: 'consultations',component: ConsultationFormComponent},
+{ path: 'admin/doctors', component: AdminDashboardComponent },
+
+{ path: 'admin', component: AdminDashboardComponent },
+{ path: 'admin/patients', component: AdminDashboardComponent },
+{ path: 'admin/stats', component: AdminDashboardComponent },
+// { path: 'update-patient/:id', component: UpdatePatientComponent },
 ];
 
 @NgModule({
