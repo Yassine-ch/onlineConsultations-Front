@@ -21,4 +21,8 @@ export class DoctorService {
   getNumberOfDoctors(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/count`); // Replace with your API endpoint
   }
+  addDoctor(doctor: Doctor): Observable<any> {
+    const url = 'http://localhost:8080/api/doctors';  // Replace with your API endpoint
+    return this.http.post(url, doctor);
+  }
 }

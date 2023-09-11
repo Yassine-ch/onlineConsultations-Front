@@ -8,6 +8,7 @@ import { PaymentComponent } from './patient/payment/payment.component';
 import { LoginComponent } from './patient/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
 { path: 'admin', component: AdminDashboardComponent },
 { path: 'admin/patients', component: AdminDashboardComponent },
 { path: 'admin/stats', component: AdminDashboardComponent },
+{ path: 'add-doctor', component: CreateDoctorComponent }
 // { path: 'update-patient/:id', component: UpdatePatientComponent },
 ];
 

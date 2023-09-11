@@ -18,6 +18,8 @@
       <!-- Main Content -->
       <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <!-- Stats Section -->
+        <button   (click)="goToAddDoctorForm()">Add a Doctor</button> 
+        <!-- -->
         <div>
           <h3 *ngIf="numberOfPatients !== undefined && numberOfDoctors !== undefined">Website Stats</h3>
           <p *ngIf="numberOfPatients !== undefined">Number of Patients: {{ numberOfPatients }}</p>

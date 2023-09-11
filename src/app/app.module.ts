@@ -28,6 +28,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SidebarAdminComponent } from './admin-dashboard/sidebar-admin/sidebar-admin.component';
 import { StatsComponent } from './admin-dashboard/stats/stats.component';
+import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
+
+
 
 
 @NgModule({
@@ -47,8 +50,9 @@ import { StatsComponent } from './admin-dashboard/stats/stats.component';
         SidebarComponent,
        SidebarAdminComponent,
         AdminDashboardComponent,
-StatsComponent
-       
+StatsComponent,
+CreateDoctorComponent,
+
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -63,6 +67,7 @@ StatsComponent
         MatSidenavModule,
         MatListModule,
         MatIconModule,
+        
         
       
    

@@ -4,6 +4,8 @@ import { PatientService } from '../patient/patient.service';
 import { Patient } from '../patient/patient';
 import { Doctor } from '../doctor/doctor';
 import { DoctorService } from '../doctor/doctor.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -20,7 +22,8 @@ export class AdminDashboardComponent implements OnInit {
   constructor(
     private patientService: PatientService,
     private doctorService: DoctorService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router:Router,
   ) {}
 
   ngOnInit(): void {
@@ -58,6 +61,9 @@ export class AdminDashboardComponent implements OnInit {
     
       
      });
+  }
+  goToAddDoctorForm() {
+    this.router.navigate(['/add-doctor']);  // Navigate to form page
   }
 
   }

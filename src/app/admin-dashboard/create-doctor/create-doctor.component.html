@@ -1,0 +1,40 @@
+<!-- create-doctor.component.html -->
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" [(ngModel)]="doctor.firstName" name="firstName">
+    </div>
+    
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" [(ngModel)]="doctor.lastName" name="lastName">
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="doctor.email" name="email">
+    </div>
+  
+    <div class="form-group">
+      <label for="proficiency">Proficiency:</label>
+      <input type="text" id="proficiency" [(ngModel)]="doctor.proficiency" name="proficiency">
+    </div>
+  
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" [(ngModel)]="doctor.price" name="price">
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="doctor.password" name="password">
+    </div>
+  
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" [(ngModel)]="doctor.confirmPassword" name="confirmPassword">
+    </div>
+  
+    <button type="button" (click)="onSubmit()">Create</button>
+  </form>
+  
