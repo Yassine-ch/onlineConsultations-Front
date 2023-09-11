@@ -25,6 +25,6 @@ export class PatientService {
     }
     //COUNT PATINT
     getNumberOfPatients(): Observable<any> {
-      return this.http.get<any>('/api/patients/count'); // Replace with your API endpoint
+      return this.http.get<any>(`${this.apiUrl}/patients/count`); // Replace with your API endpoint
     }
 }

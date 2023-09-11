@@ -19,6 +19,6 @@ export class DoctorService {
   }
   //COUNT DOCTORES
   getNumberOfDoctors(): Observable<any> {
-    return this.http.get<any>('/api/doctors/count'); // Replace with your API endpoint
+    return this.http.get<any>(`${this.apiUrl}/count`); // Replace with your API endpoint
   }
 }

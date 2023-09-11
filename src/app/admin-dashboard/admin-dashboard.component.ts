@@ -29,10 +29,11 @@ export class AdminDashboardComponent implements OnInit {
         this.loadPatients();
       } else if (url[1] && url[1].path === 'doctors') {
         this.loadDoctors();
-      } else if (url[1] && url[1].path === 'stats') {
+      } {
         this.loadStats();
       }
     });
+    
   }
 
   loadPatients(): void {
@@ -52,7 +53,11 @@ export class AdminDashboardComponent implements OnInit {
     });
   
     this.doctorService.getNumberOfDoctors().subscribe(data => {
+    
       this.numberOfDoctors = data.count; // Extracting count from the response
-    });
+    
+      
+     });
   }
-}
+
+  }
